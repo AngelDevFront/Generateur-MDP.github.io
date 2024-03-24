@@ -1,0 +1,28 @@
+// different exemple avec la fonction de propagation 
+
+tableau: dans le cas des tableau peux combiner des donnée de different tableu ensemble 
+const tableauSource = [1, 2, 3];
+const tableauDestination = [];
+tableauDestination.push(...tableauSource);
+console.log(tableauDestination); // Résultat : [1, 2, 3]
+
+dans les autre cas va servire a décomposer en élément individuel
+avec des chaines chaine de caractère:
+const chaine = "Hello";
+const caracteres = [...chaine];
+console.log(caracteres); // Résultat : ["H", "e", "l", "l", "o"]
+
+avec des noeuds de DOM:
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+const noeuds = document.querySelectorAll("div");
+const listeNoeuds = [...noeuds];
+console.log(listeNoeuds); // Résultat : [div, div, div]
+
+avec des fontions:
+function maFonction(a, b, c) {
+    console.log(a, b, c);
+}
+const arguments = [1, 2, 3];
+maFonction(...arguments); // Résultat : 1 2 3
